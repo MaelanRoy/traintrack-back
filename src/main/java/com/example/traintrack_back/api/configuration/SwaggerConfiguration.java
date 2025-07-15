@@ -28,8 +28,9 @@ public class SwaggerConfiguration {
      *
      * @return la documentation OpenAPI
      */
-    @Bean
-    public OpenAPI openApi() {        Info info = new Info()
+   @Bean
+    public OpenAPI openApi() {
+        Info info = new Info()
                 .title(applicationName)
                 .version("1.0.0")
                 .description("API de gestion d'entraînements sportifs\n\n" +
@@ -42,12 +43,8 @@ public class SwaggerConfiguration {
                         "- **ADMIN** : Accès complet - gestion des utilisateurs, modération, statistiques globales\n\n" +
                         "Pour tester les endpoints protégés, cliquez sur 'Authorize' et saisissez votre token JWT.");
 
-        Contact contact = new Contact()
-                .name("Équipe TrainTrack")
-                .email("support@traintrack-sport.com");
-
         return new OpenAPI()
-                .info(info.contact(contact))
+                .info(info)
                 .components(new Components()
                         .addSecuritySchemes("Bearer Authentication",
                                 new SecurityScheme()
