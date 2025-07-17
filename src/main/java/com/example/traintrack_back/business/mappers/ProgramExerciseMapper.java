@@ -11,8 +11,7 @@ import com.example.traintrack_back.dao.db.entities.ProgramExercise;
 /**
  * Maps ProgramExercise and ProgramExerciseDto
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring", 
-        uses = {ProgramMapper.class, ExerciseMapper.class})
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface ProgramExerciseMapper extends GenericMapper<ProgramExercise, ProgramExerciseDto> {
 
     /**

@@ -68,9 +68,18 @@ public class ExerciseImageDto {
     private String imageType;
 
     /**
-     * The exercise this image is associated with
+     * The position
      */
-    @Schema(description = "The exercise this image is associated with")
+    @Schema(example = "1", description = "The position")
     @NotNull
-    private ExerciseDto exercise;
+    @Min(1)
+    private Integer position;
+
+    /**
+     * The ID of the exercise this image is associated with
+     */
+    @Schema(example = "1", description = "The ID of the exercise this image is associated with")
+    @NotNull
+    @Min(1)
+    private Long exerciseId;
 }

@@ -17,6 +17,12 @@ public final class Constants {
     public static final class Api {
         
         public static final String USERS = "/users";
+        public static final String EXERCISE = "/exercises";
+        public static final String EXERCISE_ZONE = "/exercise-zones";
+        public static final String EXERCISE_IMAGE = "/exercise-images";
+        public static final String PROGRAM = "/programs";
+        public static final String CATEGORY = "/categories";
+
 
         private Api() {
         }

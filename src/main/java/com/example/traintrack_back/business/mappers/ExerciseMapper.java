@@ -10,7 +10,6 @@ import com.example.traintrack_back.dao.db.entities.Exercise;
 /**
  * Maps Exercise and ExerciseDto
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring", 
-        uses = {CategoryMapper.class, ExerciseZoneMapper.class})
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface ExerciseMapper extends GenericMapper<Exercise, ExerciseDto> {
 }

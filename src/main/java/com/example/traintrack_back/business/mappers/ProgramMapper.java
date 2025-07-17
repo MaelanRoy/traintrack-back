@@ -10,7 +10,6 @@ import com.example.traintrack_back.dao.db.entities.Program;
 /**
  * Maps Program and ProgramDto
  */
-@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring", 
-        uses = {UserMapper.class, CategoryMapper.class})
+@Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring")
 public interface ProgramMapper extends GenericMapper<Program, ProgramDto> {
 }

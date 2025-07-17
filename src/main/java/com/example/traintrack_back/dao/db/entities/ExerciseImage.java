@@ -54,6 +54,12 @@ public class ExerciseImage {
     private String imageType;
 
     /**
+     * The position
+     */
+    @Column(name = "position", nullable = false)
+    private Integer position;
+
+    /**
      * The exercise this image is associated with
      */
     @ManyToOne
