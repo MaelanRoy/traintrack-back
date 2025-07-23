@@ -43,7 +43,7 @@ public class ExerciseImageServiceImpl implements ExerciseImageService {
     /**
      * {@inheritDoc}
      */
-    public List<ExerciseImageDto> findByBoardGameId(Long exerciseId) {
+    public List<ExerciseImageDto> findByExerciseId(Long exerciseId) {
         List<ExerciseImage> images = exerciseImageRepository.findByExerciseId(exerciseId);
         return exerciseImageMapper.toDtos(images);
     }

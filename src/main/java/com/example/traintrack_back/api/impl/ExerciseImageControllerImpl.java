@@ -44,7 +44,7 @@ public class ExerciseImageControllerImpl extends AbstractRestController implemen
      */
     public List<ExerciseImageDto> findByExerciseId(Long exerciseId) {
         log.info("Rest : GET - {}", EXERCISE_IMAGE);
-        return logResponse(log, "GET", exerciseImageService.findByBoardGameId(exerciseId));
+        return logResponse(log, "GET", exerciseImageService.findByExerciseId(exerciseId));
     }
 
     /**

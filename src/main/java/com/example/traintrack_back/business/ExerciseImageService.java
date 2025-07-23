@@ -22,7 +22,7 @@ public interface ExerciseImageService {
      * @param exerciseId the required exercise id, must be set and greater than 0
      * @return the found image
      */
-    List<ExerciseImageDto> findByBoardGameId(@NotNull Long exerciseId);
+    List<ExerciseImageDto> findByExerciseId(@NotNull Long exerciseId);
 
     /**
      * Creates a new Image

@@ -62,6 +62,7 @@ public interface ExerciseImageController {
      *
      * @param exerciseImage a valid exercise image to create, must be set
      * @param exerciseId the exercise id linked to the image
+     * @param position the position of the image
      * @return the created exercise image
      */
     @Operation(security = {@SecurityRequirement(name = "bearer-key")}, summary = "Creates exercise image")
@@ -71,7 +72,7 @@ public interface ExerciseImageController {
     ExerciseImageDto create(
         @Parameter(required = true, description = "a valid exercise image to create, must be set")
         @Valid
-        @RequestPart("exerciceImage") MultipartFile exerciseImage,
+        @RequestPart("exerciseImage") MultipartFile exerciseImage,
         @Parameter(required = true, description = "the exercise linked to the image")
         Long exerciseId, 
         @Parameter(required = true, description = "the position of the image")

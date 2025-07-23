@@ -76,14 +76,14 @@ public class ExerciseDto {
      * The calories burned per minute for this exercise
      */
     @Schema(example = "10", description = "The calories burned per minute for this exercise")
-    @Min(1)
+    @Min(0)
     private Float caloriesPerMinute;
 
     /**
      * The calories burned per repetition for this exercise
      */
     @Schema(example = "0.5", description = "The calories burned per repetition for this exercise")
-    @Min(1)
+    @Min(0)
     private Float caloriesPerRepetition;
 
     /**

@@ -62,13 +62,13 @@ public class Exercise {
     /**
      * Calories burned per minute for this exercise
      */
-    @Column(name = "calories_per_minute", nullable = false)
+    @Column(name = "calories_per_minute")
     private Float caloriesPerMinute;
 
     /**
      * Calories burned per repetition for this exercise
      */
-    @Column(name = "calories_per_repetition", nullable = false)
+    @Column(name = "calories_per_repetition")
     private Float caloriesPerRepetition;
 
     /**
@@ -80,7 +80,7 @@ public class Exercise {
     /**
      * Default number of repetitions for the exercise
      */
-    @Column(name = "default_reps", nullable = false)
+    @Column(name = "default_reps")
     private Integer defaultRepetitions;
 
     /**

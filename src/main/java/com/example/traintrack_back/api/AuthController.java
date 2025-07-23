@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 /**
  * Endpoints for user authentication operations
  */
-@RequestMapping("/api/auth")
+@RequestMapping("/auth")
 @Tag(name = "Authentication")
 @Validated
 public interface AuthController {

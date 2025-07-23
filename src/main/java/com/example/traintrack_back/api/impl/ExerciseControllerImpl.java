@@ -59,6 +59,8 @@ public class ExerciseControllerImpl extends AbstractRestController implements Ex
      */
     @Override
     public ExerciseDto create(ExerciseDto dto) {
+                log.info("Creating exercise: {}", dto);
+
         log.info("Rest : POST - {}", EXERCISE);
         logRequest(log, dto);
         return logResponse(log, "POST", exerciseService.create(dto));
