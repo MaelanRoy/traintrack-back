@@ -9,6 +9,7 @@ import com.example.traintrack_back.api.models.ExerciseDto;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Min;
 
 /**
  * Controls for exercise
@@ -59,4 +60,12 @@ public interface ExerciseService {
      * @throws EntityNotFoundException if exercise couldn't be found
      */
     void deleteById(@NotNull Long id);
+
+    /**
+     * Returns random exercises from all categories
+     *
+     * @param limitPerCategory number of exercises per category
+     * @return list of random exercises from all categories
+     */
+    List<ExerciseDto> findRandomExercisesFromAllCategories(@NotNull @Min(1) Integer limitPerCategory);
 }

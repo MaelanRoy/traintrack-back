@@ -98,7 +98,7 @@ public class Exercise {
   /**
      * The zones this exercise targets
      */
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "exercise_zone_link",
         joinColumns = @JoinColumn(name = "exercise_id"),

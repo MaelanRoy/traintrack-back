@@ -86,5 +86,14 @@ public class ExerciseControllerImpl extends AbstractRestController implements Ex
         logResponse(log, "DELETE");
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<ExerciseDto> findRandomExercisesFromAllCategories(Integer limitPerCategory) {
+        log.info("Rest : GET - {}/random-by-categories?limitPerCategory={}", EXERCISE, limitPerCategory);
+        return logResponse(log, "GET", exerciseService.findRandomExercisesFromAllCategories(limitPerCategory));
+    }
+
 
 }

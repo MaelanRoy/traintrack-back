@@ -74,11 +74,11 @@ public interface ExerciseImageController {
         @Valid
         @RequestPart("exerciseImage") MultipartFile exerciseImage,
         @Parameter(required = true, description = "the exercise linked to the image")
-        Long exerciseId, 
+        @RequestParam("exerciseId") Long exerciseId,
         @Parameter(required = true, description = "the position of the image")
         @Min(1)
-        Integer position
-    );
+        @RequestParam("position") Integer position 
+);
 
 
     /**

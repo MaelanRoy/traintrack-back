@@ -25,6 +25,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 
@@ -96,6 +97,22 @@ public interface ExerciseController {
             @PathVariable Long id,
             @Valid
             @RequestBody ExerciseDto dto
+    );
+
+    /**
+     * Returns random exercises from all categories
+     *
+     * @param limitPerCategory the number of exercises per category
+     * @return list of random exercises from all categories
+     */
+    @Operation(security = {@SecurityRequirement(name = "bearer-key")}, 
+               summary = "Returns random exercises from all categories")
+    @GetMapping(path = "/random-by-categories/{limitPerCategory}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.OK)
+    List<ExerciseDto> findRandomExercisesFromAllCategories(
+        @Parameter(required = true, example = "4", description = "Number of exercises per category")
+        @Min(1) @Max(20) 
+        @PathVariable("limitPerCategory") Integer limitPerCategory
     );
 
     /**
